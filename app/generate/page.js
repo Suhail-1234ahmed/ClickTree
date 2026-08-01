@@ -6,7 +6,7 @@ const page = () => {
 
             <div className="col1 flex justify-center items-center flex-col text-gray-900">
                 <div className='flex flex-col gap-5 my-8'>
-                    <h1 className='font-bold text-4xl'>Create your Bittree</h1>
+                    <h1 className='font-bold text-4xl'>Create your ClickTree</h1>
                     <div className="item">
 
                         <h2 className='font-semibold text-2xl'>Step 1: Claim your Handle</h2>
@@ -32,7 +32,7 @@ const page = () => {
                         <div className='mx-4 flex flex-col'>
                             <input className='px-4 py-2 mx-2 my-2 focus:outline-pink-500 rounded-full bg-white' type="text" placeholder='Enter link to your Picture' />
                             <input className='px-4 py-2 mx-2 my-2 focus:outline-pink-500 rounded-full bg-white' type="text" placeholder='Enter description' />
-                            <button className='disabled:bg-slate-500 p-5 py-2 mx-2 w-fit my-5 bg-slate-900 text-white font-bold rounded-3xl'>Create your BitTree</button>
+                            <button className='disabled:bg-slate-500 p-5 py-2 mx-2 w-fit my-5 bg-slate-900 text-white font-bold rounded-3xl'>Create your ClickTree</button>
                         </div>
                     </div>
                 </div>
