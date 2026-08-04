@@ -1,6 +1,17 @@
+"use client"
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [text,seText]=useState("")
+  const router = useRouter()
+  
+  const createTree = () => {
+    router.push(`/generate/?handle=${text}`)
+  }
+  
   return (
       <main>
       <section className="bg-[#254f1a] min-h-[100vh] grid grid-cols-2">
@@ -10,8 +21,8 @@ export default function Home() {
       <p className="text-yellow-300 font-bold text-7xl">simple link in bio.</p>
       <p className="text-yellow-300 text-xl my-4">Join 50M+ people using Linktree for their link in bio. One link to help you share everything you create, curate and sell from your Instagram, TikTok, Twitter, YouTube and other social media profiles.</p>
       <div className="input flex gap-2">
-        <input className="bg-white py-3 px-4 font-semibold focus:outline-green-800" type="text" placeholder="ClickTree/yourname" />
-        <button className="rounded-full bg-pink-300 py-3 px-4 font-semibold cursor-pointer">Claim your Linktree</button>
+        <input  value={text} onChange={(e)=>seText(e.target.value)} className="bg-white py-3 px-4 font-semibold focus:outline-green-800" type="text" placeholder="Enter your name" />
+        <button onClick={()=>createTree()} className="rounded-full bg-pink-300 py-3 px-4 font-semibold cursor-pointer">Claim your Linktree</button>
       </div>
     </div>
     <div className="flex items-center justify-center flex-col mr-[10vw]">
